@@ -25,32 +25,43 @@ namespace Rascunho
             _quantity = quantity;
         }
 
-        public string GetName()
+        public string Name
         {
-            return _name;
-        }
-
-        public void SetName(string name)
-        {
-            if (name.Length >= 3)
+            get
             {
-                _name = name;
+                return _name;
             }
-            else
+            set
             {
-                Console.WriteLine("The error in inserting the name");
+                if (value.Length >= 3)
+                {
+                    _name = value;
+                }
+                else
+                {
+                    Console.WriteLine("The error in inserting the name");
+                }
             }
         }
 
-        public double GetPrice()
+
+        public double Price
         {
-            return _price;
+            get
+            {
+                return _price;
+            }
         }
 
-        public int GetQuantity()
+
+        public int Quantity
         {
-            return _quantity;
+            get
+            {
+                return _quantity;
+            }
         }
+
 
         public double TotalInStock()
         {

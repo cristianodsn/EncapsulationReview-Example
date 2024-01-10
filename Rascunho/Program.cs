@@ -27,9 +27,9 @@ namespace Rascunho
             Console.WriteLine("Update data: " + product);
 
             Console.WriteLine(product);
-
-            product.SetName(Console.ReadLine());
-
+            Console.WriteLine($"{product.Name}, {product.Price.ToString("F2", CultureInfo.InvariantCulture)}, {product.Quantity}," +
+                $" {product.TotalInStock().ToString("F2", CultureInfo.InvariantCulture)}");
+               
             Console.ReadKey();
         }      
 
